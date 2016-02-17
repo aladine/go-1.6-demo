@@ -9,9 +9,7 @@ import (
 
 func main() {
 	var src http.Server
-	// http2.VerboseLogs = true
 	src.Addr = ":8080"
-	// http2.ConfigureServer(&src, nil)
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hi testerer %q \n", html.EscapeString(r.URL.Path))
